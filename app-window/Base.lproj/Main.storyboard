@@ -1,24 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--MainVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="app_window" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="windowShopperBG" translatesAutoresizingMaskIntoConstraints="NO" id="5vH-ma-qhh">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="windowShopperIcon" translatesAutoresizingMaskIntoConstraints="NO" id="S5y-4d-1JJ">
+                                <rect key="frame" x="177" y="55" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="To1-DU-dJD"/>
+                                    <constraint firstAttribute="height" constant="60" id="ZoI-dJ-nGi"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Saatlik kazanç" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xuZ-zU-9cd" customClass="Currency" customModule="app_window" customModuleProvider="target">
+                                <rect key="frame" x="20" y="150" width="374" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="avO-9e-bdI"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Ürün fiyatı" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VMl-vh-YFn" customClass="Currency" customModule="app_window" customModuleProvider="target">
+                                <rect key="frame" x="20" y="215" width="374" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="io1-u3-egY"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="S5y-4d-1JJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="2UT-4g-Pdg"/>
+                            <constraint firstItem="S5y-4d-1JJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="99s-ch-pCp"/>
+                            <constraint firstItem="VMl-vh-YFn" firstAttribute="height" secondItem="xuZ-zU-9cd" secondAttribute="height" id="AOP-56-ey8"/>
+                            <constraint firstItem="xuZ-zU-9cd" firstAttribute="top" secondItem="S5y-4d-1JJ" secondAttribute="bottom" constant="35" id="LhO-Xn-upJ"/>
+                            <constraint firstItem="5vH-ma-qhh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="NEH-1c-vKD"/>
+                            <constraint firstItem="5vH-ma-qhh" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="PlY-GS-GOo"/>
+                            <constraint firstItem="xuZ-zU-9cd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="g4h-B3-nVW"/>
+                            <constraint firstItem="5vH-ma-qhh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jqd-Pa-Crt"/>
+                            <constraint firstItem="VMl-vh-YFn" firstAttribute="trailing" secondItem="xuZ-zU-9cd" secondAttribute="trailing" id="l8j-rd-1Yr"/>
+                            <constraint firstItem="5vH-ma-qhh" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="mY2-BB-zXr"/>
+                            <constraint firstItem="VMl-vh-YFn" firstAttribute="leading" secondItem="xuZ-zU-9cd" secondAttribute="leading" id="qOI-Xe-lV8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xuZ-zU-9cd" secondAttribute="trailing" constant="20" id="sow-KG-xgN"/>
+                            <constraint firstItem="VMl-vh-YFn" firstAttribute="top" secondItem="xuZ-zU-9cd" secondAttribute="bottom" constant="25" id="vgj-Zg-4lM"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="itemTxt" destination="VMl-vh-YFn" id="PL2-Ft-mV5"/>
+                        <outlet property="wageTxt" destination="xuZ-zU-9cd" id="6es-no-0m9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="116" y="118.29085457271366"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="windowShopperBG" width="414" height="736"/>
+        <image name="windowShopperIcon" width="115" height="115"/>
+    </resources>
 </document>
