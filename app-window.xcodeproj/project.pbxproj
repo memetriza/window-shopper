@@ -13,7 +13,20 @@
 		674C6F37202E5634006956B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 674C6F36202E5634006956B2 /* Assets.xcassets */; };
 		674C6F3A202E5634006956B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 674C6F38202E5634006956B2 /* LaunchScreen.storyboard */; };
 		674C6F44202E590D006956B2 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674C6F43202E590D006956B2 /* Currency.swift */; };
+		674C6F4C202E6E6F006956B2 /* app_windowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674C6F4B202E6E6F006956B2 /* app_windowTests.swift */; };
+		674C6F55202E6E91006956B2 /* Wage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674C6F54202E6E91006956B2 /* Wage.swift */; };
+		674C6F56202E6FFF006956B2 /* Wage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674C6F54202E6E91006956B2 /* Wage.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		674C6F4E202E6E6F006956B2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 674C6F24202E5634006956B2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 674C6F2B202E5634006956B2;
+			remoteInfo = "app-window";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		674C6F2C202E5634006956B2 /* app-window.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "app-window.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,10 +37,21 @@
 		674C6F39202E5634006956B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		674C6F3B202E5634006956B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		674C6F43202E590D006956B2 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		674C6F49202E6E6F006956B2 /* app-windowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "app-windowTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		674C6F4B202E6E6F006956B2 /* app_windowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = app_windowTests.swift; sourceTree = "<group>"; };
+		674C6F4D202E6E6F006956B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		674C6F54202E6E91006956B2 /* Wage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		674C6F29202E5634006956B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		674C6F46202E6E6F006956B2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				674C6F2E202E5634006956B2 /* app-window */,
+				674C6F4A202E6E6F006956B2 /* app-windowTests */,
 				674C6F2D202E5634006956B2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				674C6F2C202E5634006956B2 /* app-window.app */,
+				674C6F49202E6E6F006956B2 /* app-windowTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,6 +82,7 @@
 		674C6F2E202E5634006956B2 /* app-window */ = {
 			isa = PBXGroup;
 			children = (
+				674C6F53202E6E81006956B2 /* Model */,
 				674C6F42202E58E8006956B2 /* Views */,
 				674C6F41202E57B5006956B2 /* Controller */,
 				674C6F2F202E5634006956B2 /* AppDelegate.swift */,
@@ -83,6 +110,23 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		674C6F4A202E6E6F006956B2 /* app-windowTests */ = {
+			isa = PBXGroup;
+			children = (
+				674C6F4B202E6E6F006956B2 /* app_windowTests.swift */,
+				674C6F4D202E6E6F006956B2 /* Info.plist */,
+			);
+			path = "app-windowTests";
+			sourceTree = "<group>";
+		};
+		674C6F53202E6E81006956B2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				674C6F54202E6E91006956B2 /* Wage.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,6 +147,24 @@
 			productReference = 674C6F2C202E5634006956B2 /* app-window.app */;
 			productType = "com.apple.product-type.application";
 		};
+		674C6F48202E6E6F006956B2 /* app-windowTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 674C6F52202E6E6F006956B2 /* Build configuration list for PBXNativeTarget "app-windowTests" */;
+			buildPhases = (
+				674C6F45202E6E6F006956B2 /* Sources */,
+				674C6F46202E6E6F006956B2 /* Frameworks */,
+				674C6F47202E6E6F006956B2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				674C6F4F202E6E6F006956B2 /* PBXTargetDependency */,
+			);
+			name = "app-windowTests";
+			productName = "app-windowTests";
+			productReference = 674C6F49202E6E6F006956B2 /* app-windowTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -116,6 +178,11 @@
 					674C6F2B202E5634006956B2 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+					};
+					674C6F48202E6E6F006956B2 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 674C6F2B202E5634006956B2;
 					};
 				};
 			};
@@ -133,6 +200,7 @@
 			projectRoot = "";
 			targets = (
 				674C6F2B202E5634006956B2 /* app-window */,
+				674C6F48202E6E6F006956B2 /* app-windowTests */,
 			);
 		};
 /* End PBXProject section */
@@ -148,6 +216,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		674C6F47202E6E6F006956B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -156,12 +231,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				674C6F44202E590D006956B2 /* Currency.swift in Sources */,
+				674C6F55202E6E91006956B2 /* Wage.swift in Sources */,
 				674C6F32202E5634006956B2 /* MainVC.swift in Sources */,
 				674C6F30202E5634006956B2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		674C6F45202E6E6F006956B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				674C6F4C202E6E6F006956B2 /* app_windowTests.swift in Sources */,
+				674C6F56202E6FFF006956B2 /* Wage.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		674C6F4F202E6E6F006956B2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 674C6F2B202E5634006956B2 /* app-window */;
+			targetProxy = 674C6F4E202E6E6F006956B2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		674C6F33202E5634006956B2 /* Main.storyboard */ = {
@@ -320,6 +413,38 @@
 			};
 			name = Release;
 		};
+		674C6F50202E6E6F006956B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B642A6E36P;
+				INFOPLIST_FILE = "app-windowTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "memetriza.app-windowTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/app-window.app/app-window";
+			};
+			name = Debug;
+		};
+		674C6F51202E6E6F006956B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B642A6E36P;
+				INFOPLIST_FILE = "app-windowTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "memetriza.app-windowTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/app-window.app/app-window";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -337,6 +462,15 @@
 			buildConfigurations = (
 				674C6F3F202E5634006956B2 /* Debug */,
 				674C6F40202E5634006956B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		674C6F52202E6E6F006956B2 /* Build configuration list for PBXNativeTarget "app-windowTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				674C6F50202E6E6F006956B2 /* Debug */,
+				674C6F51202E6E6F006956B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
