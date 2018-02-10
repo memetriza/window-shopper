@@ -9,6 +9,15 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Book</string>
+            <string>Avenir-Medium</string>
+        </array>
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--MainVC-->
         <scene sceneID="tne-QT-ifu">
@@ -46,33 +55,72 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" enablesReturnKeyAutomatically="YES"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iri-3D-Cxm">
+                                <rect key="frame" x="20" y="300" width="374" height="87.666666666666686"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="64"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="saat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hsR-tx-Rp9">
+                                <rect key="frame" x="166" y="389.66666666666669" width="82" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="eJx-XA-MKM"/>
+                                    <constraint firstAttribute="width" constant="82" id="kgt-jI-3Th"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="29"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SCy-i3-cYl">
+                                <rect key="frame" x="20" y="686" width="374" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Jbi-LJ-amN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                <state key="normal" title="Hesaplamayı sıfırla">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearCalculator:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bWt-IB-WBv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="S5y-4d-1JJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="2UT-4g-Pdg"/>
+                            <constraint firstItem="iri-3D-Cxm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="41D-5p-ACg"/>
                             <constraint firstItem="S5y-4d-1JJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="99s-ch-pCp"/>
                             <constraint firstItem="VMl-vh-YFn" firstAttribute="height" secondItem="xuZ-zU-9cd" secondAttribute="height" id="AOP-56-ey8"/>
+                            <constraint firstItem="hsR-tx-Rp9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ags-aW-ef3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SCy-i3-cYl" secondAttribute="trailing" constant="20" id="GdS-Pc-Vtd"/>
                             <constraint firstItem="xuZ-zU-9cd" firstAttribute="top" secondItem="S5y-4d-1JJ" secondAttribute="bottom" constant="35" id="LhO-Xn-upJ"/>
+                            <constraint firstItem="SCy-i3-cYl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="MCH-I3-Bqi"/>
                             <constraint firstItem="5vH-ma-qhh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="NEH-1c-vKD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="SCy-i3-cYl" secondAttribute="bottom" constant="20" id="NXV-mF-sF1"/>
                             <constraint firstItem="5vH-ma-qhh" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="PlY-GS-GOo"/>
+                            <constraint firstItem="iri-3D-Cxm" firstAttribute="width" secondItem="VMl-vh-YFn" secondAttribute="width" id="W40-do-svV"/>
                             <constraint firstItem="xuZ-zU-9cd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="g4h-B3-nVW"/>
                             <constraint firstItem="5vH-ma-qhh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jqd-Pa-Crt"/>
                             <constraint firstItem="VMl-vh-YFn" firstAttribute="trailing" secondItem="xuZ-zU-9cd" secondAttribute="trailing" id="l8j-rd-1Yr"/>
+                            <constraint firstItem="iri-3D-Cxm" firstAttribute="top" secondItem="VMl-vh-YFn" secondAttribute="bottom" constant="45" id="m3E-S1-02H"/>
                             <constraint firstItem="5vH-ma-qhh" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="mY2-BB-zXr"/>
                             <constraint firstItem="VMl-vh-YFn" firstAttribute="leading" secondItem="xuZ-zU-9cd" secondAttribute="leading" id="qOI-Xe-lV8"/>
+                            <constraint firstItem="hsR-tx-Rp9" firstAttribute="top" secondItem="iri-3D-Cxm" secondAttribute="bottom" constant="2" id="say-9R-jpl"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xuZ-zU-9cd" secondAttribute="trailing" constant="20" id="sow-KG-xgN"/>
                             <constraint firstItem="VMl-vh-YFn" firstAttribute="top" secondItem="xuZ-zU-9cd" secondAttribute="bottom" constant="25" id="vgj-Zg-4lM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="hourLbl" destination="hsR-tx-Rp9" id="kdu-r3-PHU"/>
                         <outlet property="itemTxt" destination="VMl-vh-YFn" id="PL2-Ft-mV5"/>
+                        <outlet property="resultHours" destination="iri-3D-Cxm" id="3lx-py-DPQ"/>
                         <outlet property="wageTxt" destination="xuZ-zU-9cd" id="6es-no-0m9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="116" y="118.29085457271366"/>
+            <point key="canvasLocation" x="115.94202898550725" y="118.20652173913044"/>
         </scene>
     </scenes>
     <resources>
